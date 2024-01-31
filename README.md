@@ -16,3 +16,13 @@ The code is organized as follows:
 - `train.py`: functions to train a GP.
 
 Some experiments are also present in two notebooks: `gp_student.ipynb` for the study of GP with Student-t likelihood, and `bo.ipynb` for the BO experiments.
+
+Gif for the BO experiments:
+
+### 1D BO
+
+![hippo][https://github.com/tms-gvd/project_bl/blob/main/1d_bo.gif]
+
+### 2D BO
+
+![hippo][https://github.com/tms-gvd/project_bl/blob/main/2d_bo.gif]
