@@ -1,0 +1,121 @@
+@article{bleiVariationalInferenceReview2017,
+  title = {Variational {{Inference}}: {{A Review}} for {{Statisticians}}},
+  shorttitle = {Variational {{Inference}}},
+  author = {Blei, David M. and Kucukelbir, Alp and McAuliffe, Jon D.},
+  year = {2017},
+  month = apr,
+  journal = {Journal of the American Statistical Association},
+  volume = {112},
+  number = {518},
+  eprint = {1601.00670},
+  primaryclass = {cs, stat},
+  pages = {859--877},
+  issn = {0162-1459, 1537-274X},
+  doi = {10.1080/01621459.2017.1285773},
+  urldate = {2023-11-23},
+  abstract = {One of the core problems of modern statistics is to approximate difficult-to-compute probability densities. This problem is especially important in Bayesian statistics, which frames all inference about unknown quantities as a calculation involving the posterior density. In this paper, we review variational inference (VI), a method from machine learning that approximates probability densities through optimization. VI has been used in many applications and tends to be faster than classical methods, such as Markov chain Monte Carlo sampling. The idea behind VI is to first posit a family of densities and then to find the member of that family which is close to the target. Closeness is measured by Kullback-Leibler divergence. We review the ideas behind mean-field variational inference, discuss the special case of VI applied to exponential family models, present a full example with a Bayesian mixture of Gaussians, and derive a variant that uses stochastic optimization to scale up to massive data. We discuss modern research in VI and highlight important open problems. VI is powerful, but it is not yet well understood. Our hope in writing this paper is to catalyze statistical research on this class of algorithms.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Machine Learning,Statistics - Computation,Statistics - Machine Learning},
+  file = {/Users/thomasgaviard/Zotero/storage/JSGBAYL2/Blei et al. - 2017 - Variational Inference A Review for Statisticians.pdf;/Users/thomasgaviard/Zotero/storage/9L7WTA4S/1601.html}
+}
+
+@misc{gopalanScalableRecommendationPoisson2014,
+  title = {Scalable {{Recommendation}} with {{Poisson Factorization}}},
+  author = {Gopalan, Prem and Hofman, Jake M. and Blei, David M.},
+  year = {2014},
+  month = may,
+  number = {arXiv:1311.1704},
+  eprint = {1311.1704},
+  primaryclass = {cs, stat},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.1311.1704},
+  urldate = {2023-12-27},
+  abstract = {We develop a Bayesian Poisson matrix factorization model for forming recommendations from sparse user behavior data. These data are large user/item matrices where each user has provided feedback on only a small subset of items, either explicitly (e.g., through star ratings) or implicitly (e.g., through views or purchases). In contrast to traditional matrix factorization approaches, Poisson factorization implicitly models each user's limited attention to consume items. Moreover, because of the mathematical form of the Poisson likelihood, the model needs only to explicitly consider the observed entries in the matrix, leading to both scalable computation and good predictive performance. We develop a variational inference algorithm for approximate posterior inference that scales up to massive data sets. This is an efficient algorithm that iterates over the observed entries and adjusts an approximate posterior over the user/item representations. We apply our method to large real-world user data containing users rating movies, users listening to songs, and users reading scientific papers. In all these settings, Bayesian Poisson factorization outperforms state-of-the-art matrix factorization methods.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Information Retrieval,Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/Users/thomasgaviard/Zotero/storage/6GYVEEUB/Gopalan et al. - 2014 - Scalable Recommendation with Poisson Factorization.pdf;/Users/thomasgaviard/Zotero/storage/W2LF4KQI/1311.html}
+}
+
+@misc{martinez-cantinPracticalBayesianOptimization2017,
+  title = {Practical {{Bayesian}} Optimization in the Presence of Outliers},
+  author = {{Martinez-Cantin}, Ruben and Tee, Kevin and McCourt, Michael},
+  year = {2017},
+  month = dec,
+  number = {arXiv:1712.04567},
+  eprint = {1712.04567},
+  primaryclass = {cs, stat},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.1712.04567},
+  urldate = {2023-12-27},
+  abstract = {Inference in the presence of outliers is an important field of research as outliers are ubiquitous and may arise across a variety of problems and domains. Bayesian optimization is method that heavily relies on probabilistic inference. This allows outstanding sample efficiency because the probabilistic machinery provides a memory of the whole optimization process. However, that virtue becomes a disadvantage when the memory is populated with outliers, inducing bias in the estimation. In this paper, we present an empirical evaluation of Bayesian optimization methods in the presence of outliers. The empirical evidence shows that Bayesian optimization with robust regression often produces suboptimal results. We then propose a new algorithm which combines robust regression (a Gaussian process with Student-t likelihood) with outlier diagnostics to classify data points as outliers or inliers. By using an scheduler for the classification of outliers, our method is more efficient and has better convergence over the standard robust regression. Furthermore, we show that even in controlled situations with no expected outliers, our method is able to produce better results.},
+  archiveprefix = {arxiv},
+  keywords = {{90C26, 62K25, 62F35},Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/Users/thomasgaviard/Zotero/storage/ZTFH68UW/Martinez-Cantin et al. - 2017 - Practical Bayesian optimization in the presence of.pdf;/Users/thomasgaviard/Zotero/storage/6E7KW3W8/1712.html}
+}
+
+@article{mikkolaMultiFidelityBayesianOptimization,
+  title = {Multi-{{Fidelity Bayesian Optimization}} with {{Unreliable Information Sources}}},
+  author = {Mikkola, Petrus and Martinelli, Julien and Filstroff, Louis and Kaski, Samuel},
+  abstract = {Bayesian optimization (BO) is a powerful framework for optimizing black-box, expensive-toevaluate functions. Over the past decade, many algorithms have been proposed to integrate cheaper, lower-fidelity approximations of the objective function into the optimization process, with the goal of converging towards the global optimum at a reduced cost. This task is generally referred to as multi-fidelity Bayesian optimization (MFBO). However, MFBO algorithms can lead to higher optimization costs than their vanilla BO counterparts, especially when the low-fidelity sources are poor approximations of the objective function, therefore defeating their purpose. To address this issue, we propose rMFBO (robust MFBO), a methodology to make any GP-based MFBO scheme robust to the addition of unreliable information sources. rMFBO comes with a theoretical guarantee that its performance can be bound to its vanilla BO analog, with high controllable probability. We demonstrate the effectiveness of the proposed methodology on a number of numerical benchmarks, outperforming earlier MFBO methods on unreliable sources. We expect rMFBO to be particularly useful to reliably include human experts with varying knowledge within BO processes.},
+  langid = {english},
+  file = {/Users/thomasgaviard/Zotero/storage/NB6DWU54/Mikkola et al. - Multi-Fidelity Bayesian Optimization with Unreliab.pdf}
+}
+
+@inproceedings{NIPS2009_13fe9d84,
+  title = {Gaussian Process Regression with {{Student-t}} Likelihood},
+  booktitle = {Advances in Neural Information Processing Systems},
+  author = {Vanhatalo, Jarno and Jyl{\"a}nki, Pasi and Vehtari, Aki},
+  editor = {Bengio, Y. and Schuurmans, D. and Lafferty, J. and Williams, C. and Culotta, A.},
+  year = {2009},
+  volume = {22},
+  publisher = {{Curran Associates, Inc.}}
+}
+
+@misc{piironenHyperpriorChoiceGlobal2017,
+  title = {On the {{Hyperprior Choice}} for the {{Global Shrinkage Parameter}} in the {{Horseshoe Prior}}},
+  author = {Piironen, Juho and Vehtari, Aki},
+  year = {2017},
+  month = apr,
+  number = {arXiv:1610.05559},
+  eprint = {1610.05559},
+  primaryclass = {stat},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.1610.05559},
+  urldate = {2023-12-27},
+  abstract = {The horseshoe prior has proven to be a noteworthy alternative for sparse Bayesian estimation, but as shown in this paper, the results can be sensitive to the prior choice for the global shrinkage hyperparameter. We argue that the previous default choices are dubious due to their tendency to favor solutions with more unshrunk coefficients than we typically expect a priori. This can lead to bad results if this parameter is not strongly identified by data. We derive the relationship between the global parameter and the effective number of nonzeros in the coefficient vector, and show an easy and intuitive way of setting up the prior for the global parameter based on our prior beliefs about the number of nonzero coefficients in the model. The results on real world data show that one can benefit greatly -- in terms of improved parameter estimates, prediction accuracy, and reduced computation time -- from transforming even a crude guess for the number of nonzero coefficients into the prior for the global parameter using our framework.},
+  archiveprefix = {arxiv},
+  keywords = {Statistics - Methodology},
+  file = {/Users/thomasgaviard/Zotero/storage/JJ9IMBPI/Piironen and Vehtari - 2017 - On the Hyperprior Choice for the Global Shrinkage .pdf;/Users/thomasgaviard/Zotero/storage/KS7GTPZW/1610.html}
+}
+
+@book{rasmussenGaussianProcessesMachine2006,
+  title = {Gaussian Processes for Machine Learning},
+  author = {Rasmussen, Carl Edward and Williams, Christopher K. I.},
+  year = {2006},
+  series = {Adaptive Computation and Machine Learning},
+  publisher = {{MIT Press}},
+  address = {{Cambridge, Mass}},
+  isbn = {978-0-262-18253-9},
+  langid = {english},
+  lccn = {QA274.4 .R37 2006},
+  keywords = {Data processing,Gaussian processes,Machine learning,Mathematical models},
+  annotation = {OCLC: ocm61285753},
+  file = {/Users/thomasgaviard/Zotero/storage/RWJKEBT3/Rasmussen and Williams - 2006 - Gaussian processes for machine learning.pdf}
+}
+
+@misc{spehAlgorithmsLDAModel2013,
+  title = {Algorithms of the {{LDA}} Model [{{REPORT}}]},
+  author = {{\v S}peh, Jaka and Muhi{\v c}, Andrej and Rupnik, Jan},
+  year = {2013},
+  month = jul,
+  number = {arXiv:1307.0317},
+  eprint = {1307.0317},
+  primaryclass = {cs, stat},
+  publisher = {{arXiv}},
+  urldate = {2023-12-02},
+  abstract = {We review three algorithms for Latent Dirichlet Allocation (LDA). Two of them are variational inference algorithms: Variational Bayesian inference and Online Variational Bayesian inference and one is Markov Chain Monte Carlo (MCMC) algorithm {\textendash} Collapsed Gibbs sampling. We compare their time complexity and performance. We find that online variational Bayesian inference is the fastest algorithm and still returns reasonably good results.},
+  archiveprefix = {arxiv},
+  langid = {english},
+  keywords = {Computer Science - Information Retrieval,Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/Users/thomasgaviard/Zotero/storage/G98M56Q4/Špeh et al. - 2013 - Algorithms of the LDA model [REPORT].pdf}
+}
